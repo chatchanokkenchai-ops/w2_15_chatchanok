@@ -69,7 +69,7 @@ class EllipsePageState extends State<EllipsePage> {
               keyboardType: TextInputType.number,
               decoration: _textFieldStyle.copyWith(
                 labelText: "กึ่งแกนสั้น ",
-                hintText: "กรอกค่า ",
+                hintText: "กรอกค่า",
               ),
             ),
             const SizedBox(height: 30),
