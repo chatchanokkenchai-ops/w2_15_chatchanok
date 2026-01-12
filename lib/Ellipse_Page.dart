@@ -21,11 +21,57 @@ class EllipsePageState extends State<EllipsePage> {
   final TextEditingController _bCtrl = TextEditingController();
 
 
-  final InputDecoration _textFieldStyle = const InputDecoration(
+  final InputDecoration _textFieldStyle = InputDecoration(
     filled: true,
-    fillColor: Colors.blueAccent,
-    border: OutlineInputBorder(),
+    fillColor: const Color(0xfff0f8ff), // ฟ้าอ่อนสบายตา
+
+    contentPadding: const EdgeInsets.symmetric(
+      horizontal: 16,
+      vertical: 14,
+    ),
+
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: BorderSide.none,
+    ),
+
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: Color(0xff53d2dc),
+        width: 1.2,
+      ),
+    ),
+
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: Color(0xff4f8fc0),
+        width: 2,
+      ),
+    ),
+
+    labelStyle: const TextStyle(
+      color: Color(0xff26648e),
+      fontWeight: FontWeight.w500,
+    ),
+
+    floatingLabelStyle: const TextStyle(
+      color: Color(0xff4f8fc0),
+      fontWeight: FontWeight.w600,
+    ),
+
+    hintStyle: TextStyle(
+      color: Colors.blueGrey.shade300,
+      fontSize: 14,
+    ),
+
+    prefixIcon: const Icon(
+      Icons.edit,
+      color: Color(0xff4f8fc0),
+    ),
   );
+
 
 
   void _calEllipse() {
